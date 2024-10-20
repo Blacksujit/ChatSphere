@@ -1,0 +1,13 @@
+
+    .chat-history {
+        height: 400px;
+        overflow-y: scroll;
+        border: 1px solid black;
+        padding: 10px;
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+    }
+    .send-button {
+        margin-top: 10px;
+    }
+
