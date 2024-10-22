@@ -1,12 +1,20 @@
 import os
 import sys
-import time
 import logging
 from typing import Optional, Dict, List, Tuple
-from datetime import datetime
 from taipy.gui import Gui, State, notify
-from transformers import pipeline
+from transformers import AutoTokenizer, AutoModelForCausalLM
 import torch
+import warnings
+import socket
+import requests
+
+# Set custom directories
+os.environ['TMPDIR'] = 'D:/custom_temp'
+os.environ['TRANSFORMERS_CACHE'] = 'D:/huggingface_cache'
+os.environ['TORCH_HOME'] = 'D:/pytorch_cache'
+
+warnings.filterwarnings("ignore", category=ResourceWarning)
 
 # Configure logging
 logging.basicConfig(
@@ -20,10 +28,11 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Configuration constants
-MAX_CONTEXT_LENGTH = 1024
+MAX_CONTEXT_LENGTH = 150
 MAX_CONVERSATION_HISTORY = 50
 MAX_MESSAGE_LENGTH = 500
-MODEL_NAME = "openai-community/gpt2"
+MODEL_NAME = "distilgpt2"
+NEWS_API_KEY = "1e9cd35b69324a788819d59b5995cec8"  # Replace with your actual News API key
 
 # Initialize global state variables
 conversation = {
@@ -34,49 +43,48 @@ past_conversations = []
 selected_conv = None
 selected_row = [1]
 is_generating = False
-context = ("You are a knowledgeable AI assistant specialized in technology and information. "
-           "You answer questions naturally and provide detailed explanations.\n\n"
-           "Human: What is AI?\n"
-           "AI: AI stands for artificial intelligence. It refers to the simulation of human intelligence in machines.\n\n"
-           "Human: How does a neural network work?\n"
-           "AI: A neural network mimics the way the human brain operates, using layers of interconnected nodes.")
-
-
-
-
+context = (
+    "You are a knowledgeable and friendly AI assistant with a human-like personality. "
+    "You're well-informed about current events, technology, and various topics. "
+    "You engage in natural conversations, provide detailed explanations, and can discuss "
+    "recent news and developments. Always strive to be helpful, empathetic, and accurate.\n\n"
+)
 
 class ModelManager:
     def __init__(self):
         self.model = None
+        self.tokenizer = None
         self.initialize_model()
 
     def initialize_model(self) -> None:
         try:
             device = "cuda" if torch.cuda.is_available() else "cpu"
             logger.info(f"Initializing model on device: {device}")
-            self.model = pipeline("text-generation", 
-                                model=MODEL_NAME,
-                                device=device)
+            self.tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+            self.model = AutoModelForCausalLM.from_pretrained(MODEL_NAME).to(device)
             logger.info("Model initialized successfully")
         except Exception as e:
-            logger.error(f"Failed to initialize model: {e}")
+            logger.error(f"Failed to initialize model: {str(e)}")
             raise
 
     def generate_response(self, prompt: str) -> str:
         try:
-            response = self.model(
-                prompt,
-                max_length=150,
+            inputs = self.tokenizer(prompt, return_tensors="pt").to(self.model.device)
+            outputs = self.model.generate(
+                **inputs,
+                max_new_tokens=50,  # Limit the response length
                 do_sample=True,
-                top_p=0.95,
-                top_k=60,
-                num_return_sequences=1
+                top_p=0.9,  # Adjusted for better quality
+                top_k=40,  # Adjusted for better quality
+                temperature=0.7,
+                num_return_sequences=1,
+                pad_token_id=self.tokenizer.eos_token_id
             )
-            generated_text = response[0]['generated_text']
-            return generated_text.split(prompt)[-1].strip()
+            generated_text = self.tokenizer.decode(outputs[0], skip_special_tokens=True)
+            return generated_text[len(prompt):].strip()
         except Exception as e:
-            logger.error(f"Error generating response: {e}")
-            raise
+            logger.error(f"Error generating response: {str(e)}")
+            return f"I apologize, but I'm having trouble generating a response. Error: {str(e)}"
 
     def cleanup(self):
         self.model = None
@@ -92,16 +100,36 @@ def validate_message(message: str) -> None:
     if len(message) > MAX_MESSAGE_LENGTH:
         raise ValueError(f"Message exceeds maximum length of {MAX_MESSAGE_LENGTH} characters")
 
+def fetch_recent_news():
+    try:
+        url = f"https://newsapi.org/v2/top-headlines?apiKey={NEWS_API_KEY}&q=cricket"
+        response = requests.get(url)
+        news = response.json()
+        if news["status"] == "ok":
+            return [article["title"] for article in news["articles"][:5]]
+        else:
+            return []
+    except Exception as e:
+        logger.error(f"Error fetching news: {e}")
+        return []
+
 def update_context(state: State) -> str:
     global context
     validate_message(state.current_user_message)
     
+    # Fetch recent news
+    recent_news = fetch_recent_news()
+    news_context = "\n".join([f"- {news}" for news in recent_news])
+    
+    # Update context with recent news and user's message
+    context += f"\n\nRecent news:\n{news_context}\n\n"
+    context += f"Human: {state.current_user_message}\nAI:"
+    
     # Trim context if too long
     if len(context) > MAX_CONTEXT_LENGTH:
         context_parts = context.split('\n')
-        context = '\n'.join(context_parts[-20:])
+        context = '\n'.join(context_parts[-30:])  # Keep more context for better coherence
     
-    context += f"\nHuman: {state.current_user_message}\nAI:"
     return model_manager.generate_response(context)
 
 def on_init(state: State) -> None:
@@ -157,7 +185,6 @@ def send_message(state: State) -> None:
     finally:
         state.is_generating = False
 
-
 def reset_chat(state: State) -> None:
     """Reset the chat to its initial state."""
     global conversation, context, past_conversations
@@ -170,10 +197,12 @@ def reset_chat(state: State) -> None:
         state.past_conversations = past_conversations
     
     # Reset to initial state
-    context = ("The following is a conversation with an AI assistant. "
-              "The assistant is helpful, creative, clever, and very friendly.\n\n"
-              "Human: Hello, who are you?\n"
-              "AI: I am an AI created by OpenAI. How can I help you today?")
+    context = (
+        "You are a knowledgeable and friendly AI assistant with a human-like personality. "
+        "You're well-informed about current events, technology, and various topics. "
+        "You engage in natural conversations, provide detailed explanations, and can discuss "
+        "recent news and developments. Always strive to be helpful, empathetic, and accurate.\n\n"
+    )
     
     conversation = {
         "Conversation": ["Who are you?", "Hi! I am GPT-2. How can I help you today?"]
@@ -208,10 +237,12 @@ def select_conv(state: State, var_name: str, value) -> None:
     conversation = selected_conv.copy()
     
     # Rebuild context
-    context = ("The following is a conversation with an AI assistant. "
-              "The assistant is helpful, creative, clever, and very friendly.\n\n"
-              "Human: Hello, who are you?\n"
-              "AI: I am an AI created by OpenAI. How can I help you today?")
+    context = (
+        "You are a knowledgeable and friendly AI assistant with a human-like personality. "
+        "You're well-informed about current events, technology, and various topics. "
+        "You engage in natural conversations, provide detailed explanations, and can discuss "
+        "recent news and developments. Always strive to be helpful, empathetic, and accurate.\n\n"
+    )
     
     for i in range(2, len(selected_conv["Conversation"]), 2):
         context += (f"\nHuman: {selected_conv['Conversation'][i]}\n"
@@ -239,23 +270,37 @@ page = """
 |>
 """
 
+def find_free_port():
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        s.bind(('', 0))
+        s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+        return s.getsockname()[1]
+
 if __name__ == "__main__":
     try:
+        # Test the model
+        test_prompt = "Hello, how are you?"
+        logger.info(f"Testing model with prompt: {test_prompt}")
+        response = model_manager.generate_response(test_prompt)
+        logger.info(f"Model test response: {response}")
+
+        # Initialize Gui without on_init parameter
         gui = Gui(page)
+        
+        # Add on_init function separately
+        gui.on_init = on_init
+        
+        port = find_free_port()
+        print(f"Attempting to start application on port {port}")
         gui.run(
             dark_mode=True,
             title="💬 Taipy Chat",
-            port=8080,
-            debug=False
+            port=port,
+            debug=True  # Set to True for more detailed error messages
         )
     except Exception as e:
-        logger.critical(f"Failed to start application: {e}")
+        logger.critical(f"Failed to start application: {str(e)}")
         sys.exit(1)
     finally:
         model_manager.cleanup()
-        
-        
-        
-        
-        
-# Working Chatbot
+        print("Application closed.")
