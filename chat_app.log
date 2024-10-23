@@ -1,0 +1,55 @@
+2024-10-23 11:59:02,791 - model_manager - INFO - Initializing model on device: cpu
+2024-10-23 11:59:06,373 - model_manager - INFO - Model initialized successfully
+2024-10-23 11:59:06,379 - __main__ - INFO - Testing model with prompt: Hello, how are you?
+2024-10-23 11:59:27,245 - __main__ - INFO - Model test response: 1. What is the world’s technology-related problem? 2. How do you make money? 3. Have you ever heard of a “free market”? 4. If you had a dollar for every time I heard about a free market, what would you spend it on? 5. Do you know how many people you‘ve seen that are illiterate? 6. Who are the people who want to be free? 7. Where is your money coming from? 8. Why are people so angry? 9. When will the money flow? 10. Which political party are we voting for? 11. Would you like to meet me on the street? 12. Are you a communist? 13. You are a billionaire.
+This is how I make a living. I work in the financial sector. My main occupation is helping people. People in my industry are using technology to help people and create jobs.
+2024-10-23 11:59:30,317 - __main__ - INFO - Attempting to start application on port 56161
+2024-10-23 11:59:30,327 - Taipy - INFO - 'allow_unsafe_werkzeug' has been set to True
+2024-10-23 11:59:30,328 - Taipy - INFO - 'async_mode' parameter has been overridden to 'threading'. Using Flask built-in development server with debug mode
+2024-10-23 11:59:36,080 - Taipy - INFO -  * Server starting on http://127.0.0.1:56161
+2024-10-23 11:59:36,081 - Taipy - INFO -  * Application is accessible at http://localhost:56161
+2024-10-23 11:59:43,411 - chat_logic - INFO - Initializing chat application
+2024-10-23 11:59:43,834 - chat_logic - INFO - Chat application initialized successfully
+2024-10-23 11:59:44,184 - root - WARNING - [1;31m
+--- 2 warning(s) were found for page '/' in variable 'page' ---
+ - Warning 1: Table: property 'style' has been renamed to 'row_class_name'.
+ - Warning 2: TreeView: adapter property value is invalid.
+----------------------------------------------------------------[0m
+
+2024-10-23 12:22:06,986 - model_manager - INFO - Initializing model on device: cpu
+2024-10-23 12:22:12,526 - model_manager - INFO - Model initialized successfully
+2024-10-23 12:22:12,557 - __main__ - INFO - Testing model with prompt: Hello, how are you?
+2024-10-23 12:22:35,154 - __main__ - INFO - Model test response: 1. I am an English teacher.
+2. What do you do for a living? I work full-time as a freelance journalist. 2. Where do I live? If you are in the UK, can you give me some details? What are your hobbies? 3. How do we get out of here? 4. Why did you choose the city? 5. Who is the best person to work with? 6. Which of the two are the most important to you in your life? 7. Is there a foreign country that you have never visited? 8. When do people meet you outside of Europe? 9. Are you fluent in FrenchPrivacy Policy - All data and information is private and will not be shared with any third party. Privacy Policy
+If you would like to know more about this question, please visit the privacy policy. It will give you all the information you need to answer it. If the answer to this questions is yes, you will receive an email notification from the Facebook and WhatsApp pages of Facebook. This information will be used to send you messages on Facebook, WhatsApp and other social networks. You can also use this information to contact the person you want to ask about your interests. The information collected by this social network will also be stored in a database. Facebook will use your information for the purpose of sending messages to your friends and Cause to be sent to WhatsApp.
+2024-10-23 12:22:37,598 - __main__ - INFO - Attempting to start application on port 58682
+2024-10-23 12:22:37,598 - Taipy - INFO - 'allow_unsafe_werkzeug' has been set to True
+2024-10-23 12:22:37,598 - Taipy - INFO - 'async_mode' parameter has been overridden to 'threading'. Using Flask built-in development server with debug mode
+2024-10-23 12:22:43,207 - Taipy - INFO -  * Server starting on http://127.0.0.1:58682
+2024-10-23 12:22:43,207 - Taipy - INFO -  * Application is accessible at http://localhost:58682
+2024-10-23 12:22:49,531 - chat_logic - INFO - Initializing chat application
+2024-10-23 12:22:49,939 - chat_logic - INFO - Chat application initialized successfully
+2024-10-23 12:22:49,965 - root - WARNING - [1;31m
+--- 2 warning(s) were found for page '/' in variable 'page' ---
+ - Warning 1: Table: property 'style' has been renamed to 'row_class_name'.
+ - Warning 2: TreeView: adapter property value is invalid.
+----------------------------------------------------------------[0m
+
+2024-10-23 12:27:54,734 - model_manager - INFO - Initializing model on device: cpu
+2024-10-23 12:27:57,587 - model_manager - INFO - Model initialized successfully
+2024-10-23 12:27:57,587 - __main__ - INFO - Testing model with prompt: Hello, how are you?
+2024-10-23 12:28:04,718 - __main__ - INFO - Model test response: I'm not too sure what I'm supposed to say, but I guess it's a bit of a personal question, I don't want to sound like a dick, just trying to figure out what to do.
+Well, you're not a "dick" then, and you won't be a cunt.   That's all that matters. I hope you get your questions answered.
+2024-10-23 12:28:06,076 - __main__ - INFO - Attempting to start application on port 59012
+2024-10-23 12:28:06,076 - Taipy - INFO - 'allow_unsafe_werkzeug' has been set to True
+2024-10-23 12:28:06,076 - Taipy - INFO - 'async_mode' parameter has been overridden to 'threading'. Using Flask built-in development server with debug mode
+2024-10-23 12:28:10,829 - Taipy - INFO -  * Server starting on http://127.0.0.1:59012
+2024-10-23 12:28:10,831 - Taipy - INFO -  * Application is accessible at http://localhost:59012
+2024-10-23 12:28:16,214 - chat_logic - INFO - Initializing chat application
+2024-10-23 12:28:16,305 - chat_logic - INFO - Chat application initialized successfully
+2024-10-23 12:28:16,355 - root - WARNING - [1;31m
+--- 2 warning(s) were found for page '/' in variable 'page' ---
+ - Warning 1: Table: property 'style' has been renamed to 'row_class_name'.
+ - Warning 2: TreeView: adapter property value is invalid.
+----------------------------------------------------------------[0m
+

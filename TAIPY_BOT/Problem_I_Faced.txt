@@ -1,1 +1,43 @@
-The circular import and related problem 
+----> The blow is the total problem i have faced while working on the Project and this was the major issues that i have faced on this typi Project 
+
+---> Now any one who will face this issue of not getting the response just understand that you need to define the attributes in the global and then start the GUI of typi
+
+
+I see the issue. In Taipy, we need to define these variables in the global scope before initializing the GUI. Let me fix that.
+Fixed Taipy Chat Application with Proper StateClick to open code
+Key changes made:
+
+Global State Variables:
+
+Added all required variables as global variables at the module level
+These variables are now available to both the GUI and state handlers
+
+
+State Management:
+
+Updated functions to use global keyword when modifying global state
+Properly synchronized state between Taipy's State object and global variables
+
+
+Function Updates:
+
+Modified all state-modifying functions to handle both local and global state
+Added proper state synchronization in all handlers
+
+
+
+To run the application:
+
+Install dependencies:
+
+bashCopypip install taipy transformers torch
+
+Run the application:
+
+bashCopypython chat_app.py
+This version should now work without any state-related warnings. The key was to define all variables that are referenced in the GUI template as global variables before initializing the Gui object.
+Let me know if you encounter any other issues!
+
+
+
+
