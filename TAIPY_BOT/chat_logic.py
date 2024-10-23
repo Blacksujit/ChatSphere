@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 MAX_CONTEXT_LENGTH = 2000
 MAX_CONVERSATION_HISTORY = 50
 MAX_MESSAGE_LENGTH = 50
-NEWS_API_KEY = "1e9cd35b69324a788819d59b5995cec8"
+NEWS_API_KEY = "your_news_api_key"
 
 # Initialize global state variables
 conversation = {
