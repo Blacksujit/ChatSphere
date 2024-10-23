@@ -67,7 +67,7 @@ The Taipy News & Affairs Chatbot is built on the robust Taipy framework, leverag
 
 <img src="https://media.giphy.com/media/3oKIPEqDGUULpEU0aQ/giphy.gif" width="300" alt="AI Processing">
 
-#### Tech Stack:
+### Tech Stack:
 
 - Language Model: `facebook/opt-125m`, renowned for its efficiency and accuracy.
 
