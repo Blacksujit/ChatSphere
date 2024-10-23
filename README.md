@@ -1,20 +1,29 @@
 # Introducing the Taipy , Tech  News & Affairs Chatbot: Your Personal Guide to the World
 
+![Chatbot Intro](https://media.giphy.com/media/3o7TKGAJ7CLp95cNI4/giphy.gif)
 
-
+## Table of Contents
+- [Glimpse Of Bot Interaction](#glimpse-of-bot-interaction)
+- [A New Era of Information Access](#a-new-era-of-information-access)
+- [The Story Behind the Curiosity and Innovation](#the-story-behind-the-curiosity-and-innovation)
+- [The Concept: Bridging Information and Interaction](#the-concept-bridging-information-and-interaction)
+- [Key Features](#key-features)
+- [The Technical Marvel](#the-technical-marvel)
+- [Conclusion: A New Way to Engage with the World](#conclusion-a-new-way-to-engage-with-the-world)
 
 ## Glimpse Of Bot Interaction:
 
 ![alt text](image.png)
 
+## A New Era of Information Access:
 
+![Information Access](https://media.giphy.com/media/3o7TKSjRrfIPjeiVyE/giphy.gif)
 
-##  A New Era of Information Access:
+In an age where information is both abundant and overwhelming, the quest for clarity and reliability has never been more critical. Enter the Taipy News & Affairs Chatbot—a revolutionary tool designed to transform how we engage with the world's most pressing topics. From the latest headlines to cutting-edge technology and intricate foreign affairs, this chatbot is your personal guide to staying informed.
 
-In an age where information is both abundant and overwhelming, the quest for clarity and reliability has never been more critical. Enter the Taipy News & Affairs Chatbot—a revolutionary tool designed to transform how we engage with the world’s most pressing topics. From the latest headlines to cutting-edge technology and intricate foreign affairs, this chatbot is your personal guide to staying informed.
+## The Story Behind the Curiosity and Innovation:
 
-
-## The Story Behind the Innovation:
+![Innovation](https://media.giphy.com/media/26uf5YvN8Td27IrFm/giphy.gif)
 
 ### The Challenge:
 
@@ -23,7 +32,6 @@ Every day, we are bombarded with a deluge of information from countless sources.
 ### The Journey:
 
 The journey began with a deep dive into the world of conversational AI. Inspired by the groundbreaking capabilities of models like GPT-2, I envisioned a chatbot that could not only answer questions but also engage users in thoughtful dialogue. This vision was fueled by  
-
 
 ### The Vision:
 
@@ -39,10 +47,11 @@ The development of this chatbot was inspired by several key research papers and 
 
 2. "A Survey on Chatbot Implementation in Customer Service Industry through Deep Neural Networks" by Adamopoulou and Moussiades (2020) - This survey explores the use of chatbots in various industries, offering valuable perspectives on their design and implementation.
 
+## The Concept: Bridging Information and Interaction
 
-### The Concept: Bridging Information and Interaction
+![Information Bridge](https://media.giphy.com/media/l0IylOPCNkiqOgMyA/giphy.gif)
 
-The Taipy News & Affairs Chatbot is built on the robust Taipy framework, leveraging the power of the distilgpt2 model to deliver real-time, accurate information. It’s not just about answering questions; it’s about creating an interactive experience that adapts to your interests and preferences.
+The Taipy News & Affairs Chatbot is built on the robust Taipy framework, leveraging the power of the distilgpt2 model to deliver real-time, accurate information. It's not just about answering questions; it's about creating an interactive experience that adapts to your interests and preferences.
 
 ### Key Features
 
@@ -56,7 +65,9 @@ The Taipy News & Affairs Chatbot is built on the robust Taipy framework, leverag
 
 ### The Technical Marvel
 
-- Tech Stack
+![Tech Marvel](https://media.giphy.com/media/3oKIPEqDGUULpEU0aQ/giphy.gif)
+
+#### Tech Stack:
 
 - Language Model: `facebook/opt-125m`, renowned for its efficiency and accuracy.
 
@@ -74,9 +85,10 @@ The Taipy News & Affairs Chatbot is built on the robust Taipy framework, leverag
 
 - User Interface: A sleek web interface for intuitive interaction.
 
-
 ## Conclusion: A New Way to Engage with the World:      
 
-The Taipy News & Affairs Chatbot is more than a technological innovation; it’s a new way to engage with the world. Whether you’re a tech aficionado, a news enthusiast, or simply curious about global affairs, this chatbot is designed to enrich your understanding and enhance your daily life.
+![World Engagement](https://media.giphy.com/media/3o7TKMt1VVNkHV2PaE/giphy.gif)
+
+The Taipy News & Affairs Chatbot is more than a technological innovation; it's a new way to engage with the world. Whether you're a tech aficionado, a news enthusiast, or simply curious about global affairs, this chatbot is designed to enrich your understanding and enhance your daily life.
 
 Join us on this journey to redefine how we access and interact with information. The world is at your fingertips—let the Taipy News & Affairs Chatbot be your guide.
