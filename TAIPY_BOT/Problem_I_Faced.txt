@@ -1,4 +1,4 @@
-----> The blow is the total problem i have faced while working on the Project and this was the major issues that i have faced on this typi Project 
+----> The below is the total problem i have faced while working on the Project and this was the major issues that i have faced on this typi Project 
 
 ---> Now any one who will face this issue of not getting the response just understand that you need to define the attributes in the global and then start the GUI of typi
 
