@@ -1,6 +1,6 @@
 # Introducing the Taipy , Tech  News & Affairs Chatbot: Your Personal Guide to the World
 
-![Chatbot Intro](https://media.giphy.com/media/3o7TKGAJ7CLp95cNI4/giphy.gif)
+<img src="https://media.giphy.com/media/l0HlHFRbmaZtBRhXG/giphy.gif" width="300" alt="AI Technology">
 
 ## Table of Contents
 - [Glimpse Of Bot Interaction](#glimpse-of-bot-interaction)
@@ -17,13 +17,13 @@
 
 ## A New Era of Information Access:
 
-![Information Access](https://media.giphy.com/media/3o7TKSjRrfIPjeiVyE/giphy.gif)
+<img src="https://media.giphy.com/media/JWuBH9rCO2uZuHBFpm/giphy.gif" width="300" alt="Data Visualization">
 
 In an age where information is both abundant and overwhelming, the quest for clarity and reliability has never been more critical. Enter the Taipy News & Affairs Chatbot—a revolutionary tool designed to transform how we engage with the world's most pressing topics. From the latest headlines to cutting-edge technology and intricate foreign affairs, this chatbot is your personal guide to staying informed.
 
 ## The Story Behind the Curiosity and Innovation:
 
-![Innovation](https://media.giphy.com/media/26uf5YvN8Td27IrFm/giphy.gif)
+<img src="https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif" width="300" alt="AI Innovation">
 
 ### The Challenge:
 
@@ -49,7 +49,7 @@ The development of this chatbot was inspired by several key research papers and 
 
 ## The Concept: Bridging Information and Interaction
 
-![Information Bridge](https://media.giphy.com/media/l0IylOPCNkiqOgMyA/giphy.gif)
+<img src="https://media.giphy.com/media/l0HlHFRbmaZtBRhXG/giphy.gif" width="300" alt="AI Network">
 
 The Taipy News & Affairs Chatbot is built on the robust Taipy framework, leveraging the power of the distilgpt2 model to deliver real-time, accurate information. It's not just about answering questions; it's about creating an interactive experience that adapts to your interests and preferences.
 
@@ -65,7 +65,7 @@ The Taipy News & Affairs Chatbot is built on the robust Taipy framework, leverag
 
 ### The Technical Marvel
 
-![Tech Marvel](https://media.giphy.com/media/3oKIPEqDGUULpEU0aQ/giphy.gif)
+<img src="https://media.giphy.com/media/3oKIPEqDGUULpEU0aQ/giphy.gif" width="300" alt="AI Processing">
 
 #### Tech Stack:
 
@@ -87,7 +87,7 @@ The Taipy News & Affairs Chatbot is built on the robust Taipy framework, leverag
 
 ## Conclusion: A New Way to Engage with the World:      
 
-![World Engagement](https://media.giphy.com/media/3o7TKMt1VVNkHV2PaE/giphy.gif)
+<img src="https://media.giphy.com/media/iIqmM5tTjmpOB9mpbn/giphy.gif" width="300" alt="Global Technology">
 
 The Taipy News & Affairs Chatbot is more than a technological innovation; it's a new way to engage with the world. Whether you're a tech aficionado, a news enthusiast, or simply curious about global affairs, this chatbot is designed to enrich your understanding and enhance your daily life.
 
