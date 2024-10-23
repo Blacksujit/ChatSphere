@@ -51,7 +51,7 @@ The development of this chatbot was inspired by several key research papers and 
 
 <img src="https://media.giphy.com/media/l0HlHFRbmaZtBRhXG/giphy.gif" width="300" alt="AI Network">
 
-The Taipy News & Affairs Chatbot is built on the robust Taipy framework, leveraging the power of the distilgpt2 model to deliver real-time, accurate information. It's not just about answering questions; it's about creating an interactive experience that adapts to your interests and preferences.
+The Taipy News & Affairs Chatbot is built on the robust Taipy framework, leveraging the power of the facebook/opt-125m model to deliver real-time, accurate information. It's not just about answering questions; it's about creating an interactive experience that adapts to your interests and preferences.
 
 ### Key Features
 
@@ -77,7 +77,7 @@ The Taipy News & Affairs Chatbot is built on the robust Taipy framework, leverag
 
 - Data Sources: Curated from trusted news outlets and tech blogs to ensure reliability.
 
-- News API serivice for providing the timeley real-time updates regarding the news , tech and more 
+- News API service for providing the timeley real-time updates regarding the news , tech and more 
 
 ### Integrations:
 
