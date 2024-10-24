@@ -1,6 +1,7 @@
 # Introducing the Taipy , Tech  News & Affairs Chatbot: Your Personal Guide to the World
 
-<img src="https://media.giphy.com/media/l0HlHFRbmaZtBRhXG/giphy.gif" width="300" alt="AI Technology">
+ ![Header_gif_assembly-1](https://github.com/user-attachments/assets/93008d9d-8fdd-41a7-b42c-25bb7b4e7c12)
+
 
 ## Table of Contents
 - [Glimpse Of Bot Interaction](#glimpse-of-bot-interaction)
