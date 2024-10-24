@@ -13,7 +13,8 @@
 
 ## Glimpse Of Bot Interaction:
 
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/0355be5b-fe25-4e46-b72a-c8df730b5d93)
+
 
 ## A New Era of Information Access:
 
