@@ -21,7 +21,7 @@
 
 <img src="https://media.giphy.com/media/JWuBH9rCO2uZuHBFpm/giphy.gif" width="300" alt="Data Visualization">
 
-In an age where information is both abundant and overwhelming, the quest for clarity and reliability has never been more critical. Enter the Taipy News & Affairs Chatbot—a revolutionary tool designed to transform how we engage with the world's most pressing topics. From the latest headlines to cutting-edge technology and intricate foreign affairs, this chatbot is your personal guide to staying informed.
+In an age where information is both abundant and overwhelming, the quest for clarity and reliability has never been more critical. Enter the Chatsphere News & Affairs Chatbot—a revolutionary tool designed to transform how we engage with the world's most pressing topics. From the latest headlines to cutting-edge technology and intricate foreign affairs, this chatbot is your personal guide to staying informed.
 
 ## The Story Behind the Curiosity and Innovation:
 
@@ -53,7 +53,7 @@ The development of this chatbot was inspired by several key research papers and 
 
 <img src="https://media.giphy.com/media/l0HlHFRbmaZtBRhXG/giphy.gif" width="300" alt="AI Network">
 
-The Taipy News & Affairs Chatbot is built on the robust Taipy framework, leveraging the power of the facebook/opt-125m model to deliver real-time, accurate information. It's not just about answering questions; it's about creating an interactive experience that adapts to your interests and preferences.
+ChatSphere is an advanced conversational AI bot designed to engage users in natural and dynamic interactions. Utilizing the lightweight facebook/opt-125m model, ChatSphere delivers intelligent responses that enhance user experience and facilitate meaningful conversations. This innovative chatbot is engineered to understand context, sentiment, and intent, making it a powerful tool for customer support, information retrieval, and interactive engagement.
 
 ### Key Features
 
@@ -71,15 +71,15 @@ The Taipy News & Affairs Chatbot is built on the robust Taipy framework, leverag
 
 ### Tech Stack:
 
-- Language Model: `facebook/opt-125m`, renowned for its efficiency and accuracy.
+**- Language Model:** `facebook/opt-125m`, renowned for its efficiency and accuracy.
 
-- Framework: Taipy, providing a scalable and flexible environment.
+**- Framework:** Taipy, providing a scalable and flexible environment , you can visit the taipy documentation and framework information [here](https://taipy.io/)
 
-- Programming Language: Python, chosen for its versatility and rich ecosystem.
+**- Programming Language:** Python, chosen for its versatility and rich ecosystem.
 
-- Data Sources: Curated from trusted news outlets and tech blogs to ensure reliability.
+**- Data Sources:** Curated from trusted news outlets and tech blogs to ensure reliability.
 
-- News API service for providing the timeley real-time updates regarding the news , tech and more 
+**- News API service for providing the timeley real-time updates regarding the news , tech and more**
 
 ### Integrations:
 
@@ -91,6 +91,6 @@ The Taipy News & Affairs Chatbot is built on the robust Taipy framework, leverag
 
 <img src="https://media.giphy.com/media/iIqmM5tTjmpOB9mpbn/giphy.gif" width="300" alt="Global Technology">
 
-The Taipy News & Affairs Chatbot is more than a technological innovation; it's a new way to engage with the world. Whether you're a tech aficionado, a news enthusiast, or simply curious about global affairs, this chatbot is designed to enrich your understanding and enhance your daily life.
+The Chatsphere News & Affairs Chatbot is more than a technological innovation; it's a new way to engage with the world. Whether you're a tech aficionado, a news enthusiast, or simply curious about global affairs, this chatbot is designed to enrich your understanding and enhance your daily life.
 
 Join us on this journey to redefine how we access and interact with information. The world is at your fingertips—let the Taipy News & Affairs Chatbot be your guide.
